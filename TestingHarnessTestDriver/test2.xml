@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tests>
+  <test target="TestedCode1.dll">
+    <test-driver name="TestDriver 1"> <!-- main testing suite for testing the above dll -->
+      <tested-code dll-name="TestDriver1.dll"  factory-method="getPart1Tests"/> <!-- single test case or sub suite -->
+      <tested-code dll-name="TestDriver1.dll"  factory-method="getPart2Tests"/>
+      <tested-code dll-name="TestDriver1a.dll" factory-method="getPartTests"/>
+    </test-driver>
+  </test>
+</tests>

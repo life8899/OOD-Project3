@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tests>
+  <test target="TestedCode1.dll">
+    <test-driver dll-nam="TestDriver1.dll" factory-method="getTests"/>
+    <tested-code>???</tested-code>
+  </test>
+</tests>

@@ -1,0 +1,33 @@
+
+
+	/************************************************************************************************
+
+	//	REPLACE: this with an implementation based on reading the xml file
+
+		TestDriver _testDriver;
+
+		_testDriver._tested_codes.push_back(TestedCode("TestDriver1.dll", "getTests"));
+
+		_testDriver._tested_codes.push_back(TestedCode("TestDriver1.dll", "getTests"));
+
+		_testDriver._tested_codes.push_back(TestedCode("TestDriver1.dll", "getTests"));
+
+		_testDriver._tested_codes.push_back(TestedCode("TestDriver1.dll", "getTests"));
+
+		Test _test;
+
+		_test._testdrivers.push_back(_testDriver);
+
+		Tests _tests;
+		_tests.push_back(_test);
+
+		return _tests;
+	//***************************************************************************************************/
+
+	// TODO fill me in
+
+	// read and ignore the <?xml ...?> xml header, or thow exception if not present
+	// read in one xml element at a time <name attrlist>, skipping whitespace between elements between start and <, and between > and <
+	// break into name and attribute list
+	// break attribute list into name value pairs
+	// use this to build up the Test objects

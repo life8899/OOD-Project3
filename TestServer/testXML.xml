@@ -1,0 +1,10 @@
+<tests>
+  <test name="Basic Test suite for TestedCode1.dll">
+    <testdriver name="Main TestSuite for Testing TestedCode2.dll" dllname="TestDriver2.dll" dllmethod="getTests">
+      <testedcode dllname="TestedCode2.dll"></testedcode>
+    </testdriver>
+    <testdriver name="Alt TestSuite for Testing TestedCode2.dll" dllname="TestDriver2.dll" dllmethod="getTests">
+      <testedcode dllname="TestedCode2.dll"></testedcode>
+    </testdriver>
+  </test>
+</tests>
