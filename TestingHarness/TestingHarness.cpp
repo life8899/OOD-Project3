@@ -156,6 +156,13 @@ void TestHarness::flush() const
 	this->testLogger->getLogger().flush();
 }
 
+//---------------------------------------------------------------------------------------//
+
+
+
+//---------------------------------------------------------------------------------------//
+
+
 /*
 * logging methods by severity, takes in the context string and a message to log
 */

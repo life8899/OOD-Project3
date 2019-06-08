@@ -22,13 +22,15 @@
 #include "../Utilities/Utilities.h"
 #include "../Cpp11-BlockingQueue/Cpp11-BlockingQueue.h"
 
-
-#include <functional>
 #include <iostream>
+#include <functional>
 #include <stdexcept>
 #include <string>
 #include <sstream>
 #include <vector>
+
+using namespace Executive;
+
 
 using std::cerr;
 using std::cout;
@@ -51,6 +53,36 @@ static void usage(void);
 #else
 #define DEBUG(x)
 #endif
+
+// Constructor
+Executor::Executor()
+{
+	_log.write("Executor object created.\n");
+}
+
+// Destructor
+Executor::~Executor()
+{
+}
+
+
+// Private test function 1 fails
+bool testfunc1() {
+	return false;
+}
+
+// Private test function 2 passes
+bool testfunc2() {
+	return true;
+}
+
+// Private test function 3 throws an exception
+bool testfunc3() {
+	throw "Exception thrown from testfunc3...\n";
+	return true;
+}
+
+
 
 int main(int argc, char** argv)
 {

@@ -8,6 +8,22 @@
 //              ervoje@syr.edu, kutsai@syr.edu, cvbavda@syr.edu                //
 /////////////////////////////////////////////////////////////////////////////////
 
+/*
+* Package Operations:
+* -------------------
+* The TestHarness package provides the Harness object which handles the
+* execution of test functions in a safe environment. The Harness object
+* also creates a Log object that will print messages to the log.
+*
+* Maintenance History:
+* --------------------
+* Version 1.0:
+*   Initial version. Harness object executes functions in a try-catch block.
+*
+* Version 2.0:
+* 
+*/
+
 #ifndef TESTHARNESS_H
 #define TESTHARNESS_H
 
@@ -20,6 +36,11 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
+
+#include "..\includes\Logger.h"
+#include "..\includes\Executive.h"
+#include "..\includes\ITest.h"
+#include "..\includes\TestDriver.h"
 
 
 #ifdef TESTINGHARNESS_EXPORTS // inside the dll
@@ -54,6 +75,34 @@ typedef struct _testingContext
 */
 //typedef bool (*testExecutor)(void);
 typedef TESTING_HARNESS_API std::function<bool(void)> testExecutor;
+
+
+
+
+
+
+//--------------------------------------------------------------------------//
+
+namespace TestHarness
+{
+	// Object that contains all of the information to execute our function under test
+	class Harness {
+	public:
+		bool execute();
+		void parseTestXML(std::string path);
+		void addTest(Executive::TestedCode t);
+
+		// Constructors
+		Harness();
+		~Harness();
+
+	private:
+		Logging::Logger& _log = Logging::StaticLogger<1>::instance();
+		Executive::ITest* _testDriver;
+	};
+}
+
+//--------------------------------------------------------------------------//
 
 /*
 * A data structure to hold the metadata and executor for a single test case.

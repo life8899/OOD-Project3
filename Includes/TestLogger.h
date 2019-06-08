@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 // TestLogger.h - TestLogger class definition                                  //
 // ver 1.0                                                                     //
-// Language:    C++, Visual Studio 2017                                        //
+// Language:    C++, Visual Studio 2019                                        //
 // Platform:    HP G1 800, Windows 10                                          //
 // Application: Server Process Pools Project3, CSE687 - Object Oriented Design //
 // Author:      Eric Voje, Kuohsun Tsai, Chaulladevi Bavda                     //
