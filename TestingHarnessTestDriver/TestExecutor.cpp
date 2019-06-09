@@ -182,9 +182,9 @@ int main(int argc, char** argv)
 			resultMsg.reply_to(cmdMsg.id());
 
 			// now we run the test
-			DEBUG(cout << "running test" << endl);
+			DEBUG(cout << "running the test" << endl);
 			runTestCommand(cmdMsg, resultMsg);
-			DEBUG(cout << "finished running test" << endl << endl);
+			DEBUG(cout << "finished the running test" << endl << endl);
 
 			// send response
 			comm.postMessage(resultMsg);
@@ -209,7 +209,7 @@ int main(int argc, char** argv)
 		}
 	}
 
-	DEBUG(cout << "exited main loop, ending program" << endl);
+	DEBUG(cout << "exit main loop, and then end program" << endl);
 	DEBUG(cout << "********************************" << endl);
 
 	return 0;
